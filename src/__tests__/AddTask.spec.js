@@ -91,7 +91,7 @@ jest.mock('../context', () => ({
   
         fireEvent.keyDown(queryByTestId('show-main-action'), {
           key: 'Enter',
-          code: 13,
+          code: 13, 
         });
         expect(queryByTestId('add-task-main')).toBeTruthy();
   
@@ -198,6 +198,7 @@ jest.mock('../context', () => ({
         expect(setShowQuickAddTask).toHaveBeenCalled();
       });
   
+
       it('renders <AddTask /> for quick add task and then clicks cancel using onKeyDown', () => {
         const showQuickAddTask = true;
         const setShowQuickAddTask = jest.fn(() => !showQuickAddTask);
